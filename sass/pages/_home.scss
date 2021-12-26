@@ -1,7 +1,11 @@
 .section-about {
     background-color: $color-grey-light-1;
-    padding: 25rem 0;
+    padding: 25rem 0 25rem 0;
     margin-top: -20vh;
+
+    @include respond(tab-port) {
+        padding-bottom: 40rem;
+    }
 }
 
 .section-features {
@@ -20,12 +24,28 @@
     & > * {
         transform: skewY(7deg);
     }
+
+    @include respond(tab-land) {
+        padding: 15rem 0;
+    }
+
+    @include respond(tab-port) {
+        padding: 12rem 0;
+    }
+
+    @include respond(phone) {
+        padding: 9rem 0;
+    }
 }
 
 .section-tours {
     background-color: $color-grey-light-1;
     padding: 25rem 0 15rem 0;
     margin: -9rem 0 0 0;
+
+    @include respond(tab-port) {
+        padding: 15rem 0 10rem 0;
+    }
 }
 
 .section-stories {
