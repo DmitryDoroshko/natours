@@ -4,11 +4,11 @@
     -moz-perspective: 150rem;
     position: relative;
     height: 52rem;
-    background-color: $color-white;
 
     @include respond(tab-port) {
         height: auto;
         perspective: none;
+        background-color: $color-white;
     }
 
     &__side {
@@ -66,6 +66,12 @@
                     $color-tertiary-dark
                 );
             }
+        }
+    }
+
+    &:not(:hover) {
+        @include respond(tab-port) {
+            pointer-events: none;
         }
     }
 
